@@ -1,0 +1,39 @@
+/* FEED THEM SOCIAL STYLES
+Adding the html elements for each class for reference purposes. Not in the actual stylesheet.
+*/
+div.fts-instagram .feed_dynamic_classR_user {
+
+}
+/*
+The shortcode places two div wrappers, one for the profile header, one for the feed content.
+
+
+
+
+*/
+div.instagram-placeholder .fts-instagram-wrapper {
+    margin: 0 20px 20px;
+}
+/*
+There is an inline style width on this div.
+
+*/
+div.instagram-placeholder:hover a.fts-backg {
+    height: 193px;
+    padding: 8px 12px;
+    margin: -28px -12px;
+}
+a.ftis-backg {
+    height: 150px;
+    box-shadow: 0 0 0 1px rgba(0,0,0,.04),0 1px 5px rgba(0,0,0,.1);
+}
+/*
+img src is coded like this https://i2.wp.com/scontent.cdninstagram.com/t51.2885-15/s150x150/e35/c55.0.969.969/24327475_352095421921067_1209082776142217216_n.jpg?ssl=1
+*/
+a.fts-instagram-link-target .instaG-backg-link .fts-instagram-img-link {
+
+}
+img.instagram-image {
+    width: 150px;
+    height: 150px;
+}
