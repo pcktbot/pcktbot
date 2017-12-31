@@ -22,3 +22,8 @@ However, now I am hosting this off GitHub, so the k-base isn't behind my SSL. So
 Already not terribly familiar with GitHub markdown, so there's another learning curve. And how the F do I add media?
 
 There's a stylesheet and three themes. I guess I will just modify one of those. Maybe a little SCSS compiling.
+
+### Theme Color
+So these are the quick edits, like setting the `--theme-color` in the `$docsify` script.
+
+The linear gradient on the Cover Page is randomly generated, but appears to queue from the theme.

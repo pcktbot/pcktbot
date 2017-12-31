@@ -113,7 +113,7 @@ cat ~/.ssh/your-id.pub
 
 Commit the current state of repository to the configured branch.
 
-_**Note**: I am still learning the terms and workflows._
+!> _**Note**: I am still learning the terms and workflows._
 
 From the repository root directory, add the current contents to the `.git` file.
 ```bash

@@ -1,0 +1,31 @@
+/* KNOW.SCSS TEMPLATE FILE */
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans:700i|PT+Mono|Lora");
+/*
+classes with font-family
+*/
+body {
+  font-family: "Lora"; }
+
+h1, h2, h3 {
+  font-family: "Noto Sans", "Source Sans Pro", "Helvetica Neue", sans-serif; }
+
+.markdown-section code,
+.markdown-section pre,
+.markdown-section pre > code {
+  font-family: "PT Mono", monospace; }
+
+/* _coverpage button */
+section.cover .cover-main > p:last-child a {
+  border-radius: 4px; }
+
+/*
+with background or background-color
+vue.css green is #42b983
+override in window.$doscify with
+themeColor: Mandy Red
+And that replaces any CSS where a color is set with
+var(--theme-color, #42b983);
+
+*/
+
+/*# sourceMappingURL=know.css.map */
