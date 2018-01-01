@@ -20,7 +20,7 @@ ssh -i 'path/to/server.pem' user@hostname -p port
 
 There are a great deal more options. Type `'man ssh'` for all the details.
 
-# Update Installed **Yum** Packages
+# Update Installed yum Packages
 
 Use the `yum` package manager to update the installed packages for the host OS. There are lots of different package managers that often distribute the same code, and I don’t have much to say about which ones are better.
 
@@ -36,14 +36,14 @@ The transactions are numbered. Undo an package update via history.
 ```bash
 sudo yum history undo 9 // '9 being the transaction number'
 ```
-## YUM Syntax Notes
+## yum Syntax Notes
 
 `-y` is not required, but prevents an interactive prompt from asking if you want to install available updates. Omit if you want to review the available updates.
 
 `'#'` is the transaction number. Ex. `sudo yum history undo 9`.
 
 # t <small>a twitter client</small>
-**t** is a command line tool for Twitter and is easy to install. I've used it for over a year and it makes Twitter tolerable again. [Here is the repository]().
+t is a command line tool for Twitter and is easy to install. I've used it for over a year and it makes Twitter tolerable again. [Here is the repository]().
 
 You need Ruby first.
 ```
@@ -66,6 +66,13 @@ Once Ruby is installed, install the `t` gem.
 gem install t
 ```
 You'll need to authenticate your Twitter user by registering `t` as app that can access your user via the API. That's done [here](https://apps.twitter.com/).
+
+## t Syntax Notes
+After you install and add access to your Twitter account through the API, you have lots of commands at your disposal.
+
+`t update "Here is my example tweet."` Update is a tweet.
+
+`t stream timeline` view your twitter feed. `t timeline` displays a static list of your feed's most recent tweets.
 
 # Generate SSH Key to Use with Github
 
@@ -115,10 +122,14 @@ Commit the current state of repository to the configured branch.
 
 !> _**Note**: I am still learning the terms and workflows._
 
-From the repository root directory, add the current contents to the `.git` file.
+## Add, Commit, Push
+
+From the local project root directory, add the current contents to the repository.
 ```bash
 git add .
 ```
+When you are staging a commit, you can add all files (like above) or you can add specific files or directories. I have found this useful if I am in the middle of reworking something, but need to make a quick change to an existing file.
+
 Then commit the changes to the repository with comment.
 ```bash
 git commit -am "Commit Description"
@@ -149,3 +160,10 @@ Show a history of activity.
 See uncommitted changes, current branch, etc.
 
 `git status`
+
+## Branch, Origin, Merge
+Change how you connect to remote repository. From HTTPS to SSH and back again.
+```bash
+git remote set-url origin {{git@github.com:path/to/repo.git}}
+```
+This sets the urls for both fetch and push. View the current settings with just `git remote origin`.
