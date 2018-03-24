@@ -12,28 +12,35 @@
 </head>
 <body>
     <nav>
-        <a href="#/">home</a>
-        <a href="#/server">server</a>
+        <a href="#/intro.md">home</a>
+        <a href="#/server/server.md">server</a>
     </nav>
-    <div id="app"></div>
+    <div id="app">Loading Know...</div>
     <script>
         window.$docsify = {
           name: 'know.pcktbot',
           repo: 'pcktbot/pcktbot',
           coverpage: true,
           themeColor: '#E6515E',
-          mergeNavbar: true, // merge nav into sidebar on small screens
-          // ga: 'UA-...',
+          subMaxLevel: 3,
+          homepage: 'intro.md',
+          ga: 'UA-98664900-2',
           search: {
-              paths: 'auto',
-              placeholder: 'Search...'
+            paths: 'auto',
+            placeholder: 'Search it up...'
           }
         }
     </script>
-    <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
-    <!-- PLUGINS -->
-    <script src="//unpkg.com/docsify-pagination/dist/docsify-pagination.min.js"></script>
-    <script src="//unpkg.com/docsify/lib/plugins/search.min.js"></script>
+    <script src="//unpkg.com/docsify/lib/docsify.min.js" data-ga="UA-98664900-2"></script>
+    <script src="//unpkg.com/docsify/lib/plugins/ga.min.js"></script>
+  <script src="//unpkg.com/docsify/lib/plugins/external-script.min.js"></script>
+  <script src="//unpkg.com/docsify/lib/plugins/front-matter.min.js"></script>
+  <script src="//unpkg.com/docsify/lib/plugins/search.min.js"></script>
+  <script src="//unpkg.com/prismjs/components/prism-json.min.js"></script>
+  <script src="//unpkg.com/prismjs/components/prism-markdown.min.js"></script>
+  <script src="//unpkg.com/prismjs/components/prism-python.min.js"></script>
+  <script src="//unpkg.com/prismjs/components/prism-ruby.min.js"></script>
+
     <script src="//unpkg.com/docsify/lib/plugins/emoji.min.js"></script>
     <script src="//unpkg.com/prismjs/components/prism-bash.min.js"></script>
 </body>

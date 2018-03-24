@@ -20,6 +20,24 @@ ssh -i 'path/to/server.pem' user@hostname -p port
 
 There are a great deal more options. Type `'man ssh'` for all the details.
 
+# Configure Finder to Support bash
+In macOS you have ready access to a bash shell through the Terminal app. However, it is often handy to have a GUI to organize lots of files. Finder is your goto, of course, but most command line files are hidden by default.
+
+!> The OS will protect its system files, but installed packages for your user are fair game, and you could break an application by moving a directory.
+
+Anyway, you can show all hidden files in Finder by updating its plist.
+```bash
+defaults write com.apple.finder AppleShowAllFiles YES
+```
+Then you need to relaunch Finder to the see the change. Option click the Finder icon in the dock or type `killall Finder` in Terminal. Finder is always running, so quitting it will immediately reload it.
+
+## Syntax Notes
+`defaults` is macOS's user preferences manager and it has a very flexible syntax. review `man defaults` for some detail.
+
+`com.apple.finder` is the domain and you can usually find the key/value pair you write to it added to the `~/library/preferences/com.apple.finder.plist` file. In previous versions of the OS "Finder" needed to be capitalized.
+
+`AppleShowAllFiles` this has been the flag for this setting for a long time. It accepts a boolean value, so takes `true` or `false` or `yes` or `NO` and maybe `1` and `0`. The capitalization does seem to matter here.
+
 # Update Installed yum Packages
 
 Use the `yum` package manager to update the installed packages for the host OS. There are lots of different package managers that often distribute the same code, and I don’t have much to say about which ones are better.
@@ -73,97 +91,3 @@ After you install and add access to your Twitter account through the API, you ha
 `t update "Here is my example tweet."` Update is a tweet.
 
 `t stream timeline` view your twitter feed. `t timeline` displays a static list of your feed's most recent tweets.
-
-# Generate SSH Key to Use with Github
-
-To use Github to deploy files to a remote server, you need to configure it for secure access. This method covers generating a new ssh key rather than using an existing one. These directions from Github cover starting down that path.
-
-Note: You will need a Github account and know the email associated with it.
-
-## Generate a new SSH key
-
-```bash
-ssh-keygen -t rsa -b 4096 -C "email@domain.com"
-```
-- Enter an identity name (if different than default).
-- Enter a passphrase (optional?).
-- You’ll get a formal response including a little piece of art.
-
-Start the `ssh-agent`.
-```bash
-eval "$(ssh-agent -s)"
-```
-Add access for your new identity (its name, not .pub file).
-```bash
-ssh-add ~/.ssh/key_name
-```
-Copy the public key to your clipboard (or use the app that Github covers).
-```bash
-cat ~/.ssh/your-id.pub
-```
-- Select the text and copy (command C on the Mac).
-- In a browser, navigate to your settings after logging into your Github account.
-- Go to SSH and GPG Keys then add new SSH key.
-- Add a descriptive name and paste the text you copied.
-
-?> Success!
-
-## Other git Links
-
-[Using Git to Manage a Live Site]()
-
-[Generating a new SSH Key]()
-
-[Adding a new SSH to Your Github account]()
-
-# Basic git Commands
-
-Commit the current state of repository to the configured branch.
-
-!> _**Note**: I am still learning the terms and workflows._
-
-## Add, Commit, Push
-
-From the local project root directory, add the current contents to the repository.
-```bash
-git add .
-```
-When you are staging a commit, you can add all files (like above) or you can add specific files or directories. I have found this useful if I am in the middle of reworking something, but need to make a quick change to an existing file.
-
-Then commit the changes to the repository with comment.
-```bash
-git commit -am "Commit Description"
-```
-Then push the updated repository to the branch.
-```bash
-git push
-```
-Compare the uncommitted versions of the file to the committed ones.
-```bash
-git diff {{filename(optional)}}
-```
-Pull the current version of the repository to your local cloned one.
-```bash
-git pull
-```
-
-## Also try these
-
-Copy repository files to your local system.
-
-`git clone {{http://path/to/repo.git}}`
-
-Show a history of activity.
-
-`git log`
-
-See uncommitted changes, current branch, etc.
-
-`git status`
-
-## Branch, Origin, Merge
-Change how you connect to remote repository. From HTTPS to SSH and back again.
-```bash
-git remote set-url origin {{git@github.com:path/to/repo.git}}
-```
-This sets the urls for both fetch and push. View the current settings with just `git remote origin`.

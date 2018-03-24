@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AAAA,6BAA6B;AACpB,kFAA0E;AAInF;;EAEE;AACF,IAAK;EACD,WAAW,EALF,MAAM;;AAOnB,UAAW;EACP,WAAW,EAVL,4DAA4D;;AActE;;4BAE6B;EACzB,WAAW,EAhBH,oBAAoB;;AAkBhC,uBAAuB;AACvB,0CAA2C;EACvC,aAAa,EAAE,GAAG;;AAEtB;;;;;;;;EAQE",
-"sources": ["know.scss"],
-"names": [],
-"file": "know.css"
-}
