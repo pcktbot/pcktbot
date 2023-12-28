@@ -1,0 +1,74 @@
+{
+  "colors" : [
+    {
+      "hex" : "366478",
+      "name" : "Matisse",
+      "rgba" : {
+        "alpha" : 100,
+        "blue" : 120,
+        "green" : 100,
+        "red" : 54
+      }
+    },
+    {
+      "hex" : "E08981",
+      "name" : "Sea Pink",
+      "rgba" : {
+        "alpha" : 100,
+        "blue" : 129,
+        "green" : 137,
+        "red" : 224
+      }
+    },
+    {
+      "hex" : "E2743B",
+      "name" : "Sorbus",
+      "rgba" : {
+        "alpha" : 100,
+        "blue" : 59,
+        "green" : 116,
+        "red" : 226
+      }
+    },
+    {
+      "hex" : "C3A375",
+      "name" : "Camel",
+      "rgba" : {
+        "alpha" : 100,
+        "blue" : 117,
+        "green" : 163,
+        "red" : 195
+      }
+    },
+    {
+      "hex" : "847C33",
+      "name" : "Old Moss Green",
+      "rgba" : {
+        "alpha" : 100,
+        "blue" : 51,
+        "green" : 124,
+        "red" : 132
+      }
+    },
+    {
+      "hex" : "C75733",
+      "name" : "Trinidad",
+      "rgba" : {
+        "alpha" : 100,
+        "blue" : 51,
+        "green" : 87,
+        "red" : 199
+      }
+    },
+    {
+      "hex" : "506457",
+      "name" : "Mineral Green",
+      "rgba" : {
+        "alpha" : 100,
+        "blue" : 87,
+        "green" : 100,
+        "red" : 80
+      }
+    }
+  ]
+}
