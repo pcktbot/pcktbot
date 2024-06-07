@@ -1,6 +1,14 @@
-console.log("Hello via Bun!");
+console.log(Bun);
 
-await Bun.build({
-  entrypoints: ['./src'],
-  outdir: './dist',
+// for building a frontend app
+const result = await Bun.build({
+  entrypoints: [],
+  outdir: './dist'
 });
+
+console.log(result);
+
+// for serving development server
+
+// for serving production server
+

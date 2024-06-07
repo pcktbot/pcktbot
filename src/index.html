@@ -24,59 +24,116 @@
 
 
   <body>
-    <div class="main" style="background-color: rgba(78, 17, 74, 1.00);">
-      <div id="color-palette" class="border-2 border-primary color-container">
-        <article class="stack">
-          <div class="row">
-            <div class="color-block bg-old-moss-green" data-target="tldr">
-              <header class="block-header">
-                <div class="fill title">TLDR;</div>
-                <button class="control">
+    <div class="main h-100v" style="background-color: rgba(78, 17, 74, 1.00);">
+      <div class="container h-100v">
+        <!-- STRUCTURE OF RESUME FOR SCREEN READER -->
+        <!-- - article       -->
+        <!--   - sections... -->
+        <article class="stack h-100 column">
+
+
+
+          
+            <section class="stack-item section bg-tertiary" data-target="tldr">
+              <span class="stack-item-badge">TLDR;</span>
+              <header class="section-header">
+                TLDR;
+                <button class="section-close control">
                   <span class="material-symbols-outlined">close</span>
                 </button>
               </header>
-              <section class="block-content stretch">
+              <div class="section-body stretch"></div>
+            </section>
 
-              </section>
-            </div>
-            <div class="color-block bg-trinidad" data-target="example-2">
-              <button class="close absolute top right">
-                <span class="material-symbols-outlined">close</span>
-              </button>
-            </div>
-            <div class="color-block bg-mineral-green">
-              <span>Details</span>
-              <section>
+
+
+
+
+
+            <section class="stack-item section bg-secondary" data-target="example-2">
+              <header class="section-header">
+                <!-- <img class="headshot" src="./headshot.jpg" alt=""/> -->
+              </header>
+            <button class="section-close control">
+              <span class="material-symbols-outlined">close</span>
+            </button>
+            </section>
+            <section class="section stack-item bg-quaternary">
+              <header class="section-header">
+                Details
+                <button class="section-close control">
+                  <span class="material-symbols-outlined">close</span>
+                </button>
+              </header>
+              <div class="section-body">
                 <ul>
                   <li><a href="https://mstdn.social/@pcktbot">mastadon</a></li>
                   <li><a href="https://github.com/pcktbot">github</a></li>
                   <li><a href="https://pinterest.com/pcktbot">pinterest</a></li>
                 </ul>
-              </section>
-            </div>
+              </div>
+            </section>
+
+          <!-- WORK HISTORY SECTION -->
+          <section class="stack-item section bg-camel">
+            <header class="section-header">
+              Work History
+            </header>
+            <button class="section-close control">
+              <span class="material-symbols-outlined">close</span>
+            </button>
+            <div class="section-body"></div>
+          </section>
+
+
+
+
+        <section class="stack-item section bg-sorbus px-2">
+          <header class="section-header">Education</header>
+          <button class="section-close absolute right top control">
+            <span class="material-symbols-outlined">close</span>
+          </button>
+          <div class="section-body p-2">
+            I graduated from the University of Oklahoma in 2005 with a BA in Classics.
           </div>
-          <div class="color-block bg-camel">
-            <span>Work History</span>
+        </section>
+
+
+
+
+        <section class="stack-item section bg-sea-pink">
+          <header class="section-header">
+            Skills
+          </header>
+          <button class="section-close absolute right top control">
+            <span class="material-symbols-outlined">close</span>
+          </button>
+          <div class="section-body p-2">
+            <ul>
+              <li>HTML</li>
+            </ul>
           </div>
-          <div class="color-block bg-sorbus px-2">
-            <span>Education</span>
-            <div class="grow mx-2"></div>
-            <section class="section p-2">I graduated from the University of Oklahoma in 2005 with a BA in Classics.</section>
-          </div>
-          <div class="color-block bg-sea-pink">
-            <span>Skills</span>
-          </div>
-          <div class="color-block bg-matisse">
+            
+          </section>
+
+
+
+
+
+          <section class="stack-item section bg-matisse">
             <span></span>
-          </div>
-        </article>
-      </div>
+          </section>
+
+
+
+
+      </article>
+      <footer>
+        <div class="border-2 border-secondary p-2">
+          <p>David Miller(<a href="https://github.com/pcktbot" target="_blank">@pcktbot</a>)</p>
+        </div>
+      </footer>
     </div>
-    <footer>
-      <div class="border-2 border-secondary p-2">
-        <p>David Miller(<a href="https://github.com/pcktbot" target="_blank">@pcktbot</a>)</p>
-      </div>
-    </footer>
     <script id="palette-data" type="application/json" src="./palette.json"></script>
     <script defer src="./main.js" type="text/javascript"></script>
   </body>

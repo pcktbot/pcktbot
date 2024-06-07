@@ -1,34 +1,21 @@
-function toggleClass(event) {
-  console.info('#enlarge', event);
-  const div = event.target;
-
-  if (div.classList.contains('active')) {
-    return div.classList.remove('active');
-  };
-  const divs = getDivs();
-  reset(divs);
-  div.classList.add('active');
+function eventHandler(event) {
+  console.info('#eventHandler', event, this);
+  // if (event.target == )
+  // event.target.classList.toggle('active');
 }
 
-function reset(divs) {
-  for (const div of divs) {
-    div.classList.remove('active');
+function addListeners(selector) {
+  const els = document.querySelectorAll(selector);
+  if (els && els.length) {
+    els.forEach((el) => {
+      el.addEventListener('click', eventHandler);
+    });
   }
 }
 
-function handleClick(event) {
-  toggleClass(event);
-}
 
-function getDivs() {
-  return document.querySelector('.stack').children;
-}
-function addHandlers() {
-  const divs = getDivs();
-  console.info('#addHandlers', divs, divs.length);
-  for (const div of divs) {
-    div.addEventListener('click', handleClick);
-  }
-}
-
-window.addEventListener('load', addHandlers);
+document.addEventListener('DOMContentLoaded', function() {
+  console.info('#DOMContentLoaded', this);
+  const selector = '.stack-item';
+  addListeners(selector);
+});

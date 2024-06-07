@@ -6,7 +6,16 @@
     "build": "bun run index.ts"
   },
   "devDependencies": {
-    "bun-types": "latest"
+    "@babel/core": "^7.24.7",
+    "@babel/preset-env": "^7.24.7",
+    "@chialab/esbuild-plugin-html": "^0.18.2",
+    "bun-types": "latest",
+    "esbuild": "^0.21.4",
+    "esbuild-plugin-clean": "^1.0.1",
+    "esbuild-sass-plugin": "^3.3.1",
+    "glob": "^10.4.1",
+    "htmlnano": "^2.1.1",
+    "sass": "^1.77.4"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
