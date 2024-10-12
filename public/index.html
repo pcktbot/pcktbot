@@ -18,7 +18,7 @@
       </style>
 
     <link href="https://fonts.googleapis.com/css2?family=Chivo+Mono:ital,wght@0,500;0,900;1,500&display=swap" rel="stylesheet">
-    <link href="dist/styles.css" rel="stylesheet" type="text/css"/>
+    <link href="styles.css" rel="stylesheet" type="text/css"/>
     <meta/>
   </head>
 
@@ -28,103 +28,105 @@
       <div class="container h-100v">
         <!-- STRUCTURE OF RESUME FOR SCREEN READER -->
         <!-- - article       -->
-        <!--   - sections... -->
+        <!--   - navs... -->
         <article class="stack h-100 column">
-
-
-
-          
-            <section class="stack-item section bg-tertiary" data-target="tldr">
+          <header>
+            <nav class="stack-item nav" data-target="tldr">
               <span class="stack-item-badge">TLDR;</span>
-              <header class="section-header">
+              <header class="nav-header">
                 TLDR;
-                <button class="section-close control">
+                <button class="nav-close control">
                   <span class="material-symbols-outlined">close</span>
                 </button>
               </header>
-              <div class="section-body stretch"></div>
-            </section>
+            </nav>
+          </header>
+            
 
 
 
 
 
 
-            <section class="stack-item section bg-secondary" data-target="example-2">
-              <header class="section-header">
-                <!-- <img class="headshot" src="./headshot.jpg" alt=""/> -->
+            <nav class="stack-item nav" data-target="example-2">
+              <header class="nav-header">
               </header>
-            <button class="section-close control">
+            <button class="nav-close control">
               <span class="material-symbols-outlined">close</span>
             </button>
-            </section>
-            <section class="section stack-item bg-quaternary">
-              <header class="section-header">
+            </nav>
+            <nav class="nav nav-item">
+              <header class="nav-header">
                 Details
-                <button class="section-close control">
+                <button class="nav-close control">
                   <span class="material-symbols-outlined">close</span>
                 </button>
+              </nav>
               </header>
-              <div class="section-body">
-                <ul>
-                  <li><a href="https://mstdn.social/@pcktbot">mastadon</a></li>
-                  <li><a href="https://github.com/pcktbot">github</a></li>
-                  <li><a href="https://pinterest.com/pcktbot">pinterest</a></li>
-                </ul>
-              </div>
-            </section>
 
-          <!-- WORK HISTORY SECTION -->
-          <section class="stack-item section bg-camel">
-            <header class="section-header">
+
+          <!-- WORK HISTORY nav -->
+          <nav class="stack-item nav bg-camel">
+            <header class="nav-header">
               Work History
             </header>
-            <button class="section-close control">
+            <button class="nav-close control">
               <span class="material-symbols-outlined">close</span>
             </button>
-            <div class="section-body"></div>
-          </section>
+            <div class="nav-body"></div>
+          </nav>
 
 
 
 
-        <section class="stack-item section bg-sorbus px-2">
-          <header class="section-header">Education</header>
-          <button class="section-close absolute right top control">
+        <nav class="stack-item nav bg-sorbus px-2">
+          <header class="nav-header">Education</header>
+          <button class="nav-close absolute right top control">
             <span class="material-symbols-outlined">close</span>
           </button>
-          <div class="section-body p-2">
+          <div class="nav-body p-2">
             I graduated from the University of Oklahoma in 2005 with a BA in Classics.
           </div>
-        </section>
+        </nav>
 
 
 
 
-        <section class="stack-item section bg-sea-pink">
-          <header class="section-header">
+        <nav class="stack-item nav bg-sea-pink">
+          <header class="nav-header">
             Skills
           </header>
-          <button class="section-close absolute right top control">
+          <button class="nav-close absolute right top control">
             <span class="material-symbols-outlined">close</span>
           </button>
-          <div class="section-body p-2">
-            <ul>
-              <li>HTML</li>
-            </ul>
           </div>
             
-          </section>
+          </nav>
 
 
 
 
 
-          <section class="stack-item section bg-matisse">
+          <nav class="stack-item nav bg-matisse">
             <span></span>
-          </section>
+          </nav>
 
 
+
+
+
+
+
+          <!-- for tab interface bodies -->
+<section data-target="tldr" class="tab-item" role="tab">
+  <div class="nav-body">
+    <ul>
+      <li><a href="https://mstdn.social/@pcktbot">mastadon</a></li>
+      <li><a href="https://github.com/pcktbot">github</a></li>
+      <li><a href="https://pinterest.com/pcktbot">pinterest</a></li>
+    </ul>
+  </div>
+</section>
 
 
       </article>
@@ -135,6 +137,6 @@
       </footer>
     </div>
     <script id="palette-data" type="application/json" src="./palette.json"></script>
-    <script defer src="dist/bundle.js" type="module"></script>
+    <script defer src="index.js" type="module"></script>
   </body>
 </html>
