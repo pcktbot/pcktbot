@@ -1,1 +1,0 @@
-(()=>{"use strict";function t(t){var e;console.info("#eventHandler",t,this),null===(e=t.target.classList)||void 0===e||e.toggle("active")}var e;(e=document.querySelectorAll(".stack-item"))&&e.length&&e.forEach((function(e){return e.addEventListener("click",t)}))})();
