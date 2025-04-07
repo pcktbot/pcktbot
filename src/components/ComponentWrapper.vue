@@ -53,6 +53,10 @@ function bringToFront() {
 }
 
 function startDrag(event: MouseEvent) {
+  event.preventDefault();
+
+  bringToFront();
+
   isDragging.value = true;
   
   if (wrapperRef.value) {
@@ -70,6 +74,8 @@ function startDrag(event: MouseEvent) {
 function onDrag(event: MouseEvent) {
   if (!isDragging.value) return;
   
+  event.preventDefault();
+
   position.value = {
     x: event.clientX - dragOffset.value.x,
     y: event.clientY - dragOffset.value.y
@@ -97,7 +103,9 @@ function saveZIndex() {
 }
 
 function handleClick() {
-  bringToFront();
+  if (isDragging.value) {
+    bringToFront();
+  }
 }
 
 </script>
@@ -120,27 +128,20 @@ function handleClick() {
 .control-group {
   width: 400px;
   height: 400px;
-  border-radius: 8px;
   border: 2px solid red;
   position: absolute;
-  /* pointer-events: none; */
   background-color: white;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .control-group.dragging {
   opacity: 0.8;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .drag-handle {
   cursor: move;
   user-select: none;
   height: 50px;
-  width: 50px;
-  transform: translate(-50%, -50%);
-  background-color: #4e114a;
-  border-radius: 50%;
-  border-bottom: 1px solid #73265c;
+  width: 100%;
+  background-color: red;
 }
 </style>

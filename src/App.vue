@@ -5,7 +5,7 @@ import ComponentWrapper from './components/ComponentWrapper.vue';
 </script>
 
 <template>
-  <header class="header flex justify-between items-center p-4 bg-gray-800 text-white">
+  <header class="header flex justify-between items-center p-4 bg-red-700 text-white">
     <h1 class="ibm-plex-mono-semibold">pcktbot</h1>
     <HeaderControls />
   </header>
