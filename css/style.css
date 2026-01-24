@@ -32,9 +32,6 @@ main {
 .controls {
   margin-top: 1em;
 }
-.btn {
-  overflow: hidden;
-}
 .inner-btn {
   display: flex;
   height: 60px;
@@ -50,10 +47,20 @@ main {
   position: relative;
   z-index: 1;
 }
+.inner-btn:hover {
+  background-color: #eee;
+  box-shadow: 0 10px 0 0 black;
+}
+.inner-btn:active {
+  background-color: #ddd;
+  transform: translateY(4px);
+  box-shadow: 0 4px 0 0 black;
+}
 h1 {
   font-size: 20rem;
   display: flex;
   justify-content: center;
+  transition: 200ms ease-in;
 }
 h1 > span {
   display: inline-block;
@@ -61,7 +68,7 @@ h1 > span {
   transform: translateY(0);
   cursor: pointer;
 }
-h1 > span:hover {
+h1:hover {
   transform: translateY(-10px);
 }
 h1 > span.locked {
@@ -69,3 +76,11 @@ h1 > span.locked {
   text-decoration-style: wavy;
   text-underline-offset: 0.1em;
 }
+#p  { transform: translateY(10px); }
+#c  { transform: translateY(0); }
+#k  { transform: translateY(-6px); }
+#t1 { transform: translateY(-17px); }
+#b  { transform: translateY(-12px); }
+#o  { transform: translateY(-24px); }
+#t2 { transform: translateY(-37px); }
+
