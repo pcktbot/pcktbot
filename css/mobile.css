@@ -1,0 +1,56 @@
+/* Mobile styles - 2 letters per row grid layout */
+@media screen and (max-width: 768px) {
+  main {
+    justify-content: flex-start;
+    padding-top: 2rem;
+    padding-bottom: 120px;
+  }
+
+  .letters {
+    transform: translateY(-25px);
+  }
+  h1 {
+    font-size: 15rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0;
+    text-align: center;
+  }
+
+  h1 > span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 0.85;
+  }
+
+  h1 > span.locked {
+    text-decoration: none;
+    transform: translateY(0) scale(1.3) !important;
+  }
+  /* Reset the staggered transforms for mobile */
+  #p, #c, #k, #t1, #b, #o, #t2 {
+    transform: translateY(0);
+  }
+
+  h1:hover {
+    transform: none;
+  }
+
+  /* Button fixed to bottom of viewport */
+  .controls {
+    position: fixed;
+    bottom: 2rem;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    z-index: 10;
+  }
+
+  .inner-btn {
+    width: 180px;
+    height: 54px;
+  }
+}
